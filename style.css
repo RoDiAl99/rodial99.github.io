@@ -29,8 +29,13 @@
 }
 
 .tool{
-  display: flex;
-  align-items: center;}
+  position: fixed;
+/*  display: flex; */
+  align-items: center;
+  visibility: visible;
+  float: left;
+}
+
 
 #tool.hover #DocToc{
   left: 0px;
@@ -124,12 +129,6 @@ a:link, a:visited {
 a:link:active, a:visited:active {
   color: black;
 }
-
-.tool {
-  visibility: visible;
-  float: left;
-}
-
 h1 {
   text-align: center;
   font-size: 24px;
