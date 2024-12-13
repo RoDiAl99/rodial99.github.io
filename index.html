@@ -1,0 +1,590 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="js.js"></script> 
+</head>
+<body onload="init()">
+
+<div class="toc">
+  <div class="tool">
+    <input id="tool" type="image" src="images/lines.png" width="50px" onclick="toc()" />
+    <input id="off"  type="image" src="images/arl.png" width="50px" onclick="offSel()" />
+    <input type="image" id="left"  src="images/left.png" width="50px" onclick="prev()" />
+    <input type="image" id="right" src="images/right.png" width="50px" onclick="next()" />
+  </div>
+  <div id="DocToc">
+    <input class="clos" type="image" src="images/cls.png" onclick="hidToc()"/>
+    <ul class="TocTitle">Table Of Content
+    <li class="TocLink"><a href="#0" onclick="hidToc(event)">Title </a></li>
+    <li class="TocLink"><a href="#1" onclick="hidToc(event)">Preliminary Ceremony for Candidates for the Second Degree</a></li>
+    <li class="TocLink"><a href="#2" onclick="hidToc(event)">Ceremony of Opening the Lodge in the Second Degree</a></li>
+    <li class="TocLink"><a href="#3" onclick="hidToc(event)">Short Method of Opening the Lodge in the Second Degree</a></li>
+    <li class="TocLink"><a href="#4" onclick="hidToc(event)">Ceremony of Passing to the Second Degree</a></li>
+    <li class="TocLink"><a href="#5" onclick="hidToc(event)">Invocation</a></li>
+    <li class="TocLink"><a href="#6" onclick="hidToc(event)">The Five Stages</a></li>
+    <li class="TocLink"><a href="#7" onclick="hidToc(event)">Obligation</a></li>
+    <li class="TocLink"><a href="#8" onclick="hidToc(event)">Examination by the W...s</a></li>
+    <li class="TocLink"><a href="#9" onclick="hidToc(event)">The Investiture</a></li>
+    <li class="TocLink"><a href="#10" onclick="hidToc(event)">Working Tools</a></li>
+    <li class="TocLink"><a href="#11" onclick="hidToc(event)">A Charge in the Second Degree</a></li>
+    <li class="TocLink"><a href="#12" onclick="hidToc(event)">Mystic Charge</a></li>
+    <li class="TocLink"><a href="#13" onclick="hidToc(event)">Explanation of the Tracing Board of the Second Degree</a></li>
+    <li class="TocLink"><a href="#14" onclick="hidToc(event)">Examination of Candidates for the Third Degree</a></li>
+    <li class="TocLink"><a href="#15" onclick="hidToc(event)">Questions</a></li>
+    <li class="TocLink"><a href="#16" onclick="hidToc(event)">Ceremony of Closing the Lodge in the Second Degree</a></li>
+    <li class="TocLink"><a href="#17" onclick="hidToc(event)">Short Method of Closing the Lodge in the Second Degree</a></li>
+    </ul>
+  </div>
+  <div id="offSelect">
+    <button onclick="selAll()" style="margin:5px;">Select All</button>
+    <button onclick="unselAll()" style="margin:5px;">Unselect All</button>
+    <input type="image" src="images/cls.png" class="clos" onclick="hidOff()"/>
+    <table width=100% text-align="left">
+      <tr>
+        <td id="RWM" style="width:33%"><label><input type="checkbox" src="images/rect.png" onchange="sel(event)"/>RWM</label></td>
+        <td id="IPM" style="width:33%"><label><input type="checkbox" src="images/rect.png" onchange="sel(event)"/>IPM</label></td>
+        <td id="SW" style="width:34%"><label><input type="checkbox" src="images/rect.png" onchange="sel(event)"/>SW</label></td>
+      </tr>
+      <tr>
+        <td id="JW"><label><input type="checkbox" src="images/rect.png" onchange="sel(event)"/>JW</label></td>
+        <td id="SD"><label><input type="checkbox" src="images/rect.png" onchange="sel(event)"/>SD</label></td>
+        <td id="JD"><label><input type="checkbox" src="images/rect.png" onchange="sel(event)"/>JD</label></td>
+      </tr>
+      <tr>
+        <td id="IG"><label><input type="checkbox" src="images/rect.png" onchange="sel(event)"/>IG</label></td>
+        <td id="OG"><label><input type="checkbox" src="images/rect.png" onchange="sel(event)"/>OG</label></td>
+        <td id="C"><label><input type="checkbox" src="images/rect.png" onchange="sel(event)"/>C or N</label></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="doc" id="title1" name="Ritual of the Second Degree (DH-UK) 1988">
+<h1 id="0">International</h1>
+<h1>Co-Freemasonry</h1>
+<h1>Le Droit Humain</h1>
+<h1>British Federation</h1>
+<h1>Ritual of the Second Degree</h1>
+<h1>(1951 Working revised)</h1>
+<h1>Issued under the sanction of the Supreme</h1>
+<h1>Council of International Co-Freemasonry,</h1>
+<h1>Le Droit Humain</h1>
+<h1>1988</h1>
+<br/>
+<span class="page">109</span>
+
+<div class="chapter" id="chap1">
+<h2 id="1">Preliminary Ceremony for Candidates for the Second Degree</h2>
+<div class="text">The Lodge being open in the First Degree, the R.W.M. requests all E.A.s except the C. to cover the Temple and says:</div>
+<div tabindex="0" class="RWM">
+  <span class="RWMintro">R.W.M.</span> 
+  <span class="text">(to C.)</span> Bro. A.B., do you pledge your honour as a man and your fidelity as a Freemason, that you will steadily persevere through the ceremony of being passed to the degree of F.C.?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>I do, R.W.M.</div>
+<div tabindex="0" class="RWM">
+    <span class="RWMintro">R.W.M.</span>Do you likewise pledge yourself under the penalty of your former O... that you will conceal, with the same strict caution as the other <div class="tooltip">s...ts<span class="tooltiptext">secrets</span></div> in Freemasonry, that which I shall now impart to you?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span> I do, R.W.M.</div>
+<div tabindex="0" class="RWM">
+  <span class="RWMintro">R.W.M.</span>Then I will entrust you with the 
+  <div class="tooltip">p... g...<span class="tooltiptext"> </span></div> and 
+  <div class="tooltip">p... w...<span class="tooltiptext">PassWord</span></div> leading from the First to the Second Degree. The 
+  <div class="tooltip">p... g...<span class="tooltiptext"> </span></div> is given, 
+  <div class="tooltip">etc.<span class="tooltiptext"></span></div> This 
+  <div class="tooltip">p... g...<span class="tooltiptext"> </span> </div> demands a 
+  <div class="tooltip">p... w...<span class="tooltiptext">PassWord </span> </div>, which is ... . This 
+  <div class="tooltip">w...<span class="tooltiptext">word</span> </div> denotes 
+  <div class="tooltip">...<span class="page">110</span></div> , and is usually depicted in our Lodges by an 
+  <div class="tooltip">e... of c...<span class="tooltiptext"> </span> </div> near to a 
+  <div class="tooltip">f... of W...<span class="tooltiptext"> </span> </div>. You must be careful to remember this 
+  <div class="tooltip">p... g...<span class="tooltiptext"></span></div> and 
+  <div class="tooltip">p... w...<span class="tooltiptext">PassWord</span></div> as otherwise you will not be able to enter the Lodge working in a higher Degree. Pass, ...
+</div>
+<div class="text">Some responsible Brother is directed by the R.W.M. to cover the Temple with the C. and prepare him. His 
+  <div class="tooltip">l... a...  <span class="tooltiptext">left arm    </span></div>, 
+  <div class="tooltip">r... b...  <span class="tooltiptext">right breast</span></div> and 
+  <div class="tooltip">r... k...  <span class="tooltiptext">right knee  </span></div> are made 
+  <div class="tooltip">b...       <span class="tooltiptext">bare        </span></div> and his 
+  <div class="tooltip">l... h...  <span class="tooltiptext">left heel   </span></div> 
+  <div class="tooltip">s...p-s...d<span class="tooltiptext">slip shoed  </span></div>. Meanwhile the Lodge is opened in the Second Degree.
+</div>
+</div>
+<div class="chapter" id="chap2">
+<h2 id="2">Ceremony of Opening the Lodge in the Second Degree</h2>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span><span class="text">(having previously asked all below the rank of F.C. to cover the Temple, gives one k... which is answered by the <div class="tooltip">W...<span class="tooltiptext">Wardens</span></div>)</span>Brn., assist me to open this Lodge in the Second Degree.</div>
+<div class="text">(All rise.)</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>W.J.W., what is the first care of every F.C.F.?</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>To prove the Lodge close tyled, R.W.M.<span class="page">111</span></div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> Direct that duty to be done.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span> Bro. I.G., you will prove that the Lodge is close tyled.</div>
+<div class="text">The I.G. gives E.A. k...s, which are answered by the Tyler.</div>
+<div tabindex="0" class="IG"><span class="IGintro">I.G.</span> <span class="text">(with <div class="tooltip">s...n<span class="tooltiptext">sign</span> </div> of E.A.)</span>W.J.W., the Lodge is close tyled.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>R.W.M., the Lodge is close tyled.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>W.S.W., what is our next care?</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>To see that the Brn. stand to order as E.A. F...s, R.W.M.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Brn., to order as E.A. F...s.</div>
+<div class="text">The Brn. stand to order with <div class="tooltip">s..p<span class="tooltiptext">step</span> </div> and <div class="tooltip">s...n<span class="tooltiptext">sign</span> </div>, and then, following the lead of the R.W.M., take <div class="tooltip">p... of f...<span class="tooltiptext"></span> </div></div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>W.J.W., are you a F.C.F.?</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>I am, R.W.M.; try me and prove me.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>By what instrument in architecture will you be proved?</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>By the <div class="tooltip">s...<span class="tooltiptext">square</span> </div>, R.W.M.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>What is a <div class="tooltip">s...<span class="tooltiptext">square</span> </div>?<span class="page">112</span></div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>an <div class="tooltip">a... of n...y d...s<span class="tooltiptext">angle of 90 degrees</span> </div> or the <div class="tooltip">f...h p...t of a c...e<span class="tooltiptext">fourth part of a circle</span> </div>.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Being yourself acquainted with the proper mode, you will prove the Brn. to be <div class="tooltip">C...n<span class="tooltiptext"></span> </div> by a <div class="tooltip">s...n<span class="tooltiptext">sign</span> </div>, and demonstrate that proof to me by copying their example.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>Brn., <span class="text">(all come to order as E.A.s.)</span> it is the R.W.M.'s command that you prove yourself <div class="tooltip">C...n<span class="tooltiptext"></span> </div> by a s...n.</div>
+<div class="text">The Brn., taking the second <div class="tooltip">r... s...p<span class="tooltiptext"></span> </div> give the <div class="tooltip">s...n<span class="tooltiptext">sign</span> </div>, and when the J.W. has seen it to be correct he says :</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>R.W.M., the Brn. have proved themselves <div class="tooltip">C...n<span class="tooltiptext">Craftman</span> </div> by a <div class="tooltip">s...n<span class="tooltiptext">sign</span> </div>, and in obedience to your command I thus copy their example. <span class="text">(Gives <div class="tooltip">s...n<span class="tooltiptext">sign</span> </div>.)</span></div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>W.J.W., I acknowledge the correctness of the <div class="tooltip">s...n<span class="tooltiptext">sign</span> </div>.</div>
+<div class="text">R.W.M. gives <div class="tooltip">s...n<span class="tooltiptext">sign</span> </div>, and then the Brn., following his lead, take the p... of f...</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> Brn., before I declare this F.C. Lodge open, let us turn to T.G.G.O.T.U. <span class="text">(Raising his hands)</span> May the rays of His <span class="page">113</span>truth continue to shed their benign influence upon us, to enlighten us in the paths of Virtue and Science.</div>
+All sing <div tabindex="0" class="song"><div class="tooltip">S... m... i... b...<span class="tooltiptext">So mot it be</span> </div></div>
+<div class="text">The I.P.M. is conducted to the A... as in the First Degree.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Brn. <span class="text">(all come to order, and the R.W.M. raises his hands)</span>, in the Name of T.G.G.O.T.U. I declare this Lodge duly open <span class="text">(all finish the s...n, and take the p... of f...)</span> on the s..., for the instruction and improvement of F.C. F.s <span class="text">(gives F.C. k...s, which are answered by the S.W., J.W., I.G. and T.)</span>.</div>
+<div class="text">At the word "open" the I.P.M. exposes one p... of the c...s, and then returns to the E.</div>
+<div class="text">The S.D. on his return arranges the T.B.</div>
+
+All sing<div tabindex="0" class="song">
+  Within our Temple met again<br>
+  With heart and purpose strong,<span class="page">114</span><br>
+  We'll raise our notes of grateful praise,<br>
+  With union in our song.<br>
+  May we be loyal, brave and true,<br>
+  Staunch F...-C... men all,<br>
+  Who live by plumb-rule and by square,<br>
+  Released from passion's thrall.<br>
+  Around our Altar's sacred shrine,<br>
+  May love's pure incense rise,<br>
+  Bearing upon its mystic flame<br>
+  Our music to the skies.<br><br>
+  <div class="tooltip">S... m... i... b...<span class="tooltiptext">So mot it be</span> </div>
+</div>
+<div class="text">The W.T. and Stages which have been previously concealed must be placed in readiness.</div>
+
+
+</div>
+<div class="chapter" id="chap3">
+<h2 id="3">Short Method of Opening the Lodge in the Second Degree</h2>
+<div class="text">
+(Not to be used when a Second Degree Ceremony is to be performed)</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> <span class="text">(having previously asked all below the rank of F.C. to cover the Temple, gives one k..., which is answered by the W...s, rises and says)</span>Principal Officers upstanding; <span class="text">(W...s rise)</span> W.J.W., will you be Off or From?<span class="page">115</span></div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span> From, R.W.M.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>From what?</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>From the Degree of E.A. to that of F.C.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Rise, Brn. <span class="text">(All rise)</span>.</div>
+<div class="text">The I.P.M. is conducted to the A... as in the First Degree. </div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Brn., <span class="text">(all stand to order as E.A.s)</span> by virtue of the power in me vested as Master, I declare this Lodge open in the Degree of F.C. <span class="text">(gives F.C. k...s, which are answered by the S.W., J.W., I.G., and O.G.)</span>. And this shall be your s...n.</div>
+<div class="text">The Brn. advancing with the two r... s...ps, stand to order with the s...n and then take the p... of f..., following throughout the lead of R.W.M.</div>
+<div class="text">At the word "open" the I.P.M. exposes one p... of the c..s; when the s...n has been given he returns to the E. saluting the R.W.M. in passing -procedure as in the First Degree. The Brn. resume their seats after all the Officers have returned to their places.<span class="page">116</span>
+</div>
+
+
+</div>
+<div class="chapter" id="chap4">
+  <h2 id="4">Ceremony of Passing to the Second Degree</h2>
+<div class="text">When the C. is ready the Tyler sounds an alarm-the E.A. k...s.</div>
+<div tabindex="0" class="IG"><span class="IGintro">I.G.</span> W.J.W., there is an alarm.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span><span class="text">(rises)</span>R.W.M., there is an alarm.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>W.J.W., you will enquire who seeks admission.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>Bro. I.G., you will see who seeks admission.</div>
+<div class="text">The I.G. goes out, closes the door, examines the preparation of the C., and addresses the Tyler thus.</div>
+<div tabindex="0" class="IG"><span class="IGintro">I.G.</span>Whom have you there?</div>
+<div tabindex="0" class="OG"><span class="OGintro">O.G.</span>Bro. A.B., who has been regularly initiated into Freemasonry and has made such progress as he hopes will entitle him to be passed to the F.C. Degree for which ceremony he comes properly prepared.</div>
+<div tabindex="0" class="IG"><span class="IGintro">I.G.</span>How does he hope to obtain that privilege?<span class="page">117</span></div>
+<div tabindex="0" class="OG"><span class="OGintro">O.G.</span>By the help of G..., the assistance of the s... and the virtue of a <div class="tooltip">p... g...<span class="tooltiptext"></span></div> and <div class="tooltip">p... w...<span class="tooltiptext">PassWord</span></div></div>
+<div tabindex="0" class="IG"><span class="IGintro">I.G.</span>Let him give me the <div class="tooltip">p... g...<span class="tooltiptext"></span></div> and <div class="tooltip">p... w...<span class="tooltiptext">PassWord</span>.</div></div>
+<div class="text">The C, gives them.</div>
+<div tabindex="0" class="IG"><span class="IGintro">I.G.</span>Let the A... wait while I make report to the R.W.M.</div>
+<div class="text">The I.G. re-enters the Lodge, closes the door, advances with s...ps and s...n and says :</div>
+<div tabindex="0" class="IG"><span class="IGintro">I.G.</span>R.W.M., there now stands at the door of the Lodge Bro. A.B., who has been regularly initiated into Freemasonry and has made such progress as he hopes will entitle him to be passed to the F.C. Degree, for which ceremony he comes properly prepared.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>How does he hope to obtain that privilege?</div>
+<div tabindex="0" class="IG"><span class="IGintro">I.G.</span>By the help of G..., the assistance of the s... and the virtue of a <div class="tooltip">p... g...<span class="tooltiptext"></span></div> and <div class="tooltip">p... w...<span class="tooltiptext">PassWord</span></div> .</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>We acknowledge the propriety of the aid by which he seeks admission. Do you Bro. I.G., vouch that <span class="page">118</span>he is in possession of the p... g... and <div class="tooltip">p... w...<span class="tooltiptext">PassWord</span>?</div></div>
+<div tabindex="0" class="IG"><span class="IGintro">I.G.</span>I do, R.W.M.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> Then let him be admitted in due form. Brother Deacons.</div>
+<div class="text">The Deacons go to the W. to receive the C., as in the previous Degree. The I.G. opens the door, meets the C. at the entrance, instructs him to set his f..t on a large s... which is placed on the threshold for that purpose, applies the external angle of another s... to his r... b..., and says:</div>
+<div tabindex="0" class="IG"><span class="IGintro">I.G.</span>Let the angle of the s... pressing your r... b... teach you to act on the s... with all mankind, but more especially with your Brn. in Freemasonry. Enter this Lodge of F.C. F...s in the Name of T.G.G.O.T.U.</div>
+<div class="text">The I.G. raises the s... above his own head to show the R.W.M. that he has performed his task. The S.D.* now takes charge of the C., leads him beneath the crossed wands to the left of the S.W., and directs him to salute the R.W.M. as in E.A.</div>
+<hr/><div class="text">* In some Lodges the J.D. takes charge of the C. until his last work is finished.</div><hr/>
+<span class="page">119</span>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Let the A... k..., while we invoke the aid of our Superiors on our proceedings.</div>
+<div class="text">During the Invocation the Deacons cross their wands over the head of the C. and the Thurifer stands behind him swinging the censer. The Brn. rise and stand with p... of f...</div>
+
+
+</div>
+<div class="chapter" id="chap5">
+  <h2 id="5">Invocation</h2>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> <span class="text">(raising his hands)</span>We again invoke your aid, O ye Ministers of T.G.G.O.T.U., and Thine, O Most Worthy and Venerable M... O... W..., who art the H... of all true Freemasons throughout the world;* may this A.., initiated in <span class="page">120</span> your presence and having grown in virtue and usefulness under your protection, pass now into fuller knowledge and learn the true Craft of Life based on Virtue and here to be developed by Science into ever-deepening Wisdom.</div>
+
+<hr/><div class="text">* Alternative Wording-"G.G.O.T.U., we again invoke your aid and yours, O ye Ministers, of Wisdom. Strength and Beauty"</div><hr/>
+
+All sing <div tabindex="0" class="song"><div class="tooltip">S... m... i... b...<span class="tooltiptext">So mot it be</span> </div></div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Let the A... rise.</div>
+<div class="text">The Brn. resume their seats.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Let the Candidate perambulate the Lodge.</div>
+<div class="text">The S.D. then takes the C. the first perambulation, directing him to salute therein as an E.A. and halting him at the J.W.'s pedestal.</div>
+<div tabindex="0" class="SD"><span class="SDintro">S.D.</span> <span class="text">(to C.)</span>You will advance to the W.J.W. as an E.A.F., with the s...p and s...n, and give him the g... or t... and the w... of an E.A.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>Have you anything to communicate?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>I have <span class="text">(J.W. rises and receives the g... of an E.A.F.)</span>.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>What is this?<span class="page">121</span></div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>the g... or t... of an E.A.F.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>What does this g... demand?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>A w...</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>Give me that w... freely and on this occasion in full.</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span><span class="text">(gives the w...)</span>.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span> Pass ...</div>
+<div class="text">The C. is led to his former position in the W., saluting the S.W. in passing, with the E.A. s...n.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Bro. S. D., let the A... accomplish his last work.</div>
+<div class="text">The S.D. leads the C. to the pedestal of the J.W., gives him a mallet and a chisel, instructs him to k...l on his l... k... and give three blows striking the mallet on the chisel applied to the r...h a..r. He then leads the C. to his former position in the W.</div>
+<div tabindex="0" class="SD"><span class="SDintro">S.D.</span>R.W.M., the A...'s last work is finished.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> <span class="text">(gives k..., which is answered by the W...s)</span> The Brn, in the N., E., S. and W. will take notice that Bro. A.B., who has been regularly initiated into <span class="page">122</span>Freemasonry is about to pass in view before them, to show that he is properly prepared to be passed to the F.C. Degree.</div>
+<div class="text">The C. is now taken the second perambulation. He salutes therein as an E.A. and at its conclusion halts at the S.W.'s pedestal.</div>
+<div tabindex="0" class="SD"><span class="SDintro">S.D.</span> <span class="text">(to C.)</span>You will advance to the W.S.W. as an E.A.F., with the s...p and s...n, and give him the <div class="tooltip">p... g...<span class="tooltiptext"></span></div> and <div class="tooltip">p... w...<span class="tooltiptext">PassWord</span></div> you received from the R.W.M.</div>
+<div class="text">As soon as the s...p and s...n are given, the S.D takes C.'s r... h... and with it gives the alarm of the Degree-i.e., the E.A. k...s- on the S.W's right shoulder.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>Whom have you there?</div>
+<div tabindex="0" class="SD"><span class="SDintro">S.D.</span>Bro. A.B. who has been regularly initiated into Freemasonry, and has made such progress as he hopes will entitle him to be passed to the F.C. Degree for which ceremony he comes properly prepared.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>How does he hope to obtain that privilege?</div>
+<div tabindex="0" class="SD"><span class="SDintro">S.D.</span>by the help of G..., the assistance of the s... and the virtue of a <div class="tooltip">p... g...<span class="tooltiptext"></span></div> and <div class="tooltip">p... w...<span class="tooltiptext">PassWord</span></div></div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span> <span class="text">(to C.)</span>Are you in possession of the <div class="tooltip">p... g...<span class="tooltiptext"></span></div> and <div class="tooltip">p... w...<span class="tooltiptext">PassWord</span></div>?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>I am <span class="text">(S,W. rises and receives <div class="tooltip">p... g...<span class="tooltiptext"></span></div>)</span><span class="page">123</span></div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>What is this?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span> <span class="text">(prompted by S.D.)</span></span>The <div class="tooltip">p... g...<span class="tooltiptext"></span></div> leading from the First to the Second Degree.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>What does this <div class="tooltip">p... g...<span class="tooltiptext"></span></div> demand?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span> <span class="text">(prompted by S.D.)</span>A <div class="tooltip">p... w...<span class="tooltiptext">PassWord</span></div></div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>Give me that <div class="tooltip">p... w...<span class="tooltiptext">PassWord</span></div></div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span class="text">(gives the <div class="tooltip">p... w...<span class="tooltiptext">PassWord</span></div>).</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>What does ... denote?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>...</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>How is it usually depicted in our Lodges?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>By an e... of c... near to a f... of w...</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>Pass, ...</div>
+<div class="text">The S.D. now places the C. on the S.W.'s left. The S.W. takes the C's hand, rises and says :</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>R.W.M., I present to you Bro. A.B., an A... properly prepared to be passed to the F.C. Degree.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>W.S.W., your presentation shall receive attention, but in order to attain the higher Degree, five stages must be passed.</div>
+<span class="page">124</span>
+
+</div>
+<div class="chapter" id="chap6">
+<h2 id="6">The Five Stages</h2>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Bro. S. D. supply the A.. with a mallet and chisel and let him view the First Stage.</div>
+<div class="text">The S.D. conducts the C. to the E. in front of the R.W.M.; he then displays the tablet on which is inscribed THE FIRST STAGE, etc.</div>
+<div class="text">The S.D. instructs the C. to read from the tablet in a firm and clear voice.</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span><span class="text">(reading aloud)</span>The Senses.<br>
+Touch, by which the embodied Spirit first learns the existence of the world around him.<br>
+Hearing, his guide in rendering all harmonious.<br>
+Sight, by the aid of which he shapes all to beauty.<br>
+Taste, by which he separates the wholesome and the poisonous.<br>
+Smell, by which he knows the life-increasing from the life-destroying.</div>
+<div tabindex="0" class="SD"><span class="SDintro">S.D.</span>R.W.M., the First Stage is passed<span class="page">125</span></div>
+<div class="text">A bell is sounded once at this point.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>My Bro., up to this point you have been occupied in shaping the rough stone; now in your quality of F.C. you must learn to mould and polish the material so as to give elegance and beauty to the edifice we are raising. The Senses are the windows by which the Spirit becomes aware of his material surroundings. They must be kept clean and bright, else is the vision marred. Only when they are rightly developed and trained can they perform their functions; they should indeed be the servants of our mind and the agents of our faculties. The Initiate should begin his studies with the knowledge of himself and always remember that nothing which touches the welfare of humanity should be a matter of indifference to those who are preparing themselves to become its servants.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Bro. S.D., give the A.. a rule and compasses and show him the Second Stage.<span class="page">126</span></div>
+<div class="text">The D...s take the mallet, chisel and tablet from the C.</div>
+<div class="text">The S.D. conducts the C. a few steps further to the S. until he faces the I.P.M. He then gives him a rule (a t... f... i... g...) and compasses. The D...s display the second tablet for the C. to read.</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span><span class="text">(reading aloud)</span>The Arts.<br>
+Architecture, the synthesis of beautiful forms.<br>
+Sculpture, the detailed shaping of beautiful forms.<br>
+Painting, the magic of blended colours.<br>
+Music, the resolution of all sounds into harmony.<br>
+Poetry, the reason speaking creatively by beauty.</div>
+<div tabindex="0" class="SD"><span class="SDintro">S.D.</span>R.W.M., the Second Stage is passed.</div>
+<div class="text">Here the bell is sounded twice.</div>
+<div tabindex="0" class="IPM"><span class="IPMintro">I.P.M.</span>My Bro., the Arts express the beauty, by which the G.G. manifests Himself in matter. Architecture and
+Sculpture aim at perfection in form. <span class="page">127</span>Painting translates Nature by colour, Music reveals her by sound, showing us the idea behind the object. Poetry synthesises all the arts in the realm of imagination, which is the creative world, and sends down thence the inspiration which evolves them into ever new types of the one beauty. It is the duty of the F.C. to seek the Beautiful in all and to set an example of cultured refinement, simplicity and dignity in his own life, as well as to endeavour to aid in the spreading of true art in his nation.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Bro. S.D., supply the A... with a pl... rule and level, and let him view the Third Stage.</div>
+<div class="text">The D..s take the rule, compasses and tablet from the C.</div>
+<div class="text">The S.D. conducts the C. to the S.W., gives him a pl... rule and level. The D..s display the third tablet.</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span><span class="text">(reading aloud)</span> Natural Science.<br>
+Mathematics, the Divine Reason expressing itself in Number and Causation.<br><span class="page">128</span>
+Geometry, the symbolism of the Ideas which embody themselves in Form.<br>
+Philosophy, the Vision of the One.<br>
+Biology, the history of the evolution of the Individual.<br>
+Sociology, the building of our individuals into Society.</div>
+<div tabindex="0" class="SD"><span class="SDintro">S.D.</span>R.W.M., the Third Stage is passed.</div>
+<div class="text">Here the bell is sounded thrice.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span> My Bro., Mathematics and Geometry reveal the creative method and the laws by which crude matter is moulded into forms They are projections from the mind of the G.G.. and all science is but their unfoldment. Philosophy sees the One amid the many and leads man to the unity which lies behind diversity. Biology teaches the right evolution of the particular individual and Sociology that of the larger individual, society. These different branches of Science maybe said to unite in one - the Science of Universal Life - for all is life in nature, and all forms of science <span class="page">129</span>apply to the manifestations of that One Life.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Bro. S.D., provide the A... with a pencil and book and let him view the Fourth Stage.</div>
+<div class="text">The D...s take the rule, level and tablet from the C.</div>
+<div class="text">The S.D. conducts the C. to the J.W., gives him a pencil and book. The D...s display the fourth tablet.</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span><span class="text">(reading aloud)</span>Benefactors of Humanity.<br>
+Sages, the bringers to men of the Fire from heaven, embodying the Spirit.<br>
+Artists, the Priests of the Beautiful, embodying the Emotions.<br>
+Scientists, the Kings of the Mind, embodying the Intellect.<br>
+Inventors, the Masters of Skill, embodying physical Evolution.<br>
+Legislators, the Symbols of Power, embodying Order.</div>
+<div tabindex="0" class="SD"><span class="SDintro">S.D.</span>R.W.M., the Fourth Stage is passed.<span class="page">130</span></div>
+<div class="text">Here the bell is sounded four times.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>My Bro., the bringers of the light of the Divine Wisdom have made life intelligible and death negligible. Artists catch the inspiration of the ideal and are its channels to the lower worlds, Scientists win knowledge and spread it abroad for the instruction of the ignorant. Inventors apply knowledge to the service of humanity. Legislators translate universal laws into rules adapted to the particular. All these benefactors of humanity have helped to point out to it the virtues to be practised and the goal to be attained. Let us offer them our homage and follow their steps. As a F.C. you must emulate the type of benefactor which is most congenial to you.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Bro. S.D., let the A... have his hands free as he views the Fifth Stage.</div>
+<div class="text">The D...s take the pencil, book and tablet from the C.</div>
+<div class="text">The S.D. conducts the C. to the left of the <span class="page">131</span>S.W. The D...s display the fifth tablet.</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span> <span class="text">(reading aloud)</span> Service. The highest ideal of life is to serve.</div>
+<div tabindex="0" class="SD"><span class="SDintro">S.D.</span>R.W.M., the Fifth Stage is passed.</div>
+<div class="text">Here the bell is sounded five times.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>My Bro., he that is greatest is he that serveth best. When mutual service becomes the recognised law of human life, each man will be a steward, not an owner, and will hold all his possessions -spiritual, intellectual, moral, physical, as the common wealth, which he joyfully administers for the common good. Only when this is reached will the One Will be done below as it done above, by those who know that perfect freedom is only found in perfect service. At this stage your hands are left free, but nevertheless you keep your a...n, your emblem of service; let us serve according to our means and our strength, whether by doing so we obtain ridicule or praise.</div>
+<div class="text">The S.D. removes the tablet.<span class="page">132</span></div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>W.S.W., you will direct the S.D. to instruct the A... to advance to the E. by the proper s...ps.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>Bro. S.D., it is the R.W.M.'s command that you instruct the A... to advance to the E. by the proper s...ps.</div>
+<div class="text">The S.D. conducts the C. to the N. side of the Lodge approximately opposite to the J.W., and facing S.</div>
+<div tabindex="0" class="SD"><span class="SDintro">S.D.</span><span class="text">(to C.)</span>The method of advancing to the E. in this Degree is by f... s...ps, emblematical of ascending a w..g s...e, etc.......... I shall now go through them for your instruction, after which you will copy my example.</div>
+<div class="text">The S.D. instructs the C. to stand with the l... f... pointing forward and the r... h...l square with the h...l of the l... f... . The f...t s...p is taken with the l... f... by raising it about one foot in the air; etc. After the last s...p the C. stands with his h...s square as before. The h...s are not brought to the square between the several s...ps. This last s...p should bring the C. to the A... without any further movement of the f...</div>
+<div class="text">The R.W.M. may place the I.P.M. in the Chair. He descends to the A... The D.C., Thurifer and s...d-bearers act as in the preceding Degree.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> <span class="text">(to C.)</span>As the s...ts of each Degree are to be kept separate and distinct from each other, another O... will now be required of you. Are you willing to take it?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>I am, R.W.M.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Then you will k... on your r... k..., keeping your l... k... in the f... of a s...; place your r... h... on the V.S.L., while your l... e...w is supported in the angle of the s..., <span class="text">(The arm must be supported by the J.D. in the position of the H...g s...n of a F.C. If there be more than one C. a Bro. may be appointed to support the s...s)</span>; state your several names at length and say after me:</div>
+<div class="text">Here the Brn. rise.<span class="page">134</span></div>
+
+</div>
+<div class="chapter" id="chap7">
+<h2 id="7">Obligation</h2>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>I, A.B., in the presence of T.G.G.O.T.U. and in the body of this Chartered and Right Worshipful Lodge of F.C.F.s, regularly assembled and properly dedicated, of my own free will and accord, do hereby and hereon most solemnly and sincerely swear that I will always hele, conceal, and never wilfully reveal, any of the s...ts or mysteries of or belonging to the F.C. Degree to him who is but an E.A., any more than I would any of them to the uninitiated of the outer world who are not Freemasons.
+I further pledge myself to act as a true and faithful C..n, acknowledge s...ns, obey summonses and maintain the principles inculcated in the First Degree.
+These several points I solemnly swear to observe without evasion, equivocation or mental reservation of any kind, under no less a penalty, on the violation of any them, than that of having, etc. or the more effective punishment of being <span class="page">135</span>branded as a wilfully perjured individual void of all moral worth.
+So help me, G.G.O.T.U., and keep me steadfast in my great and solemn O..., being that of a F.C.F.</div>
+<div class="text">The S.D. removes the s... from the e...w of the C. who lowers his hands.</div>
+<div class="text">All sing softly thrice</div> <p class="song">May the VOW be kept!</p>
+<div class="text">The accompanying ritual actions both here and in the act of admission are exactly the same as in the earlier Degree.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> <span class="text">(to C.)</span>In the presence of the Deity Whose Name you have invoked, and of the F.C. F.s here assembled, you will now recognise the solemnity of your O... and your submission to our discipline by touching twice with your lips the V.S.L.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> <span class="text">(holding the f... s...d aloft in right hand)</span>To the Glory of T.G.G.O.T.U <span class="text">(lowering s...d to "carry")</span> and to the perfection of humanity, <span class="text">(raising the g... in left hand)</span> in the name and under the auspices of the Supreme Council of International <span class="page">136</span>Co-Freemasonry Le Droit Humain <span class="text">(crossing g... over s...d)</span> by virtue of the power in me vested, <span class="text">(placing s...d on h... of C.)</span> I create <span class="text">(sounds F.C. k..s with g... on the b...de of s...d and then removes s...d to l... s...)</span> receive <span class="text">(repeats k...s, with s...d on l... s... and then removes it to r... s...)</span> and constitute you <span class="text">(repeats k.. s, with s...d on r... s...)</span> a F.C.F. <span class="text">(again places s...d on h..., as these last words are spoken.)</span></div>
+<div class="text">The F.C. k...s are sounded on a bell immediately after the above words; if there is more than one N. they are sounded for each. The sound should be allowed to die away naturally. A few chords of music should be played here, as in the previous Degree.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Your progress in Freemasonry is marked by the position of the s... and c... When you were made an E.A. both p...s of the c...s were concealed; in this Degree one is disclosed, implying that a new ray of light is now shed upon your life, which will enable you to discover the <span class="page">137</span>way to that wider knowledge to which I trust you will hereafter attain.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> <span class="text">(taking the N, by the r... h...)</span>Rise duly o...d F.C.F.</div>
+<span class="text">The Brn. chant</span> <p class="song">Hail, Bro.; Bro., hail! </p><span class="text">as in the First Degree. The D.C., Thurifer and s...d-bearers resume their places and all are seated</span>.
+<div class="text">The S.D. places the N, in the N.E., and the R.W.M. stands facing him.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>As you have now taken the great and solemn O... of a F.C.F., I shall proceed to entrust you with the s...ts of this Degree. You will, therefore, advance to me as an E.A. <span class="text">(N. advances)</span>. You will now take another short p... towards me with your l... f.., bringing the r... h... into its h...w. That is the second r... s...p in Freemasonry.
+It is with the f..t in the second r... s...p position of the that the s...ts of this Degree are communicated. They consist, as in the former Degree, of a s...n, a g... or t... and a w... The s...n in this Degree is threefold. The first part is given thus ..., and is called the s...n of f..., or of s...y. It is emblematical of shielding the repository of our s...ts from the attacks of the insidious. The second part of the s...n is given thus ..., and is called the h...g s...n or s...n of p...e sometimes called the s...n of p...r. The third part is called the p... s...n, and is commonly supposed to allude to the p...y, attached among our ancient Operative Brn., to any violation of the O..., which was that of having, etc. The g... or t... is given thus ... The g... demands a w... regarding which you are to observe the same strict caution as in the former Degree. The word is ... . The S.D. will now dictate the answers you are to give.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> <span class="text">(gives the g... to the N.)</span>What is this?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span><span class="text">(prompted by S.D.)</span>The g... or t... of a F.C.F.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>What does this g... demand?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>A w...</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Give me that w...<span class="page">141</span></div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>In this Degree, as in the former, I was taught to be cautious, but with you, a Bro., I will l... or h... it.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>I commend you for your caution; l... it and begin.</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span> <span class="text">(shares the w...)</span>.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>This w... is derived from the r... h... p... at the p..y e...e of K... S...'s T... so named after ..., the assistant H... P... who officiated at its dedication. The import of the w... is ..., and when conjoined with the w... of the First Degree, signifies ... .</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> <span class="text">(taking the N. by r... h... and passing him to the S., says)</span>Pass,..., to the W.W...s.</div>
+<div class="text">The R.W.M. returns to the Chair.</div>
+
+</div>
+<div class="chapter" id="chap8">
+<h2 id="8">Examination by the WDs</h2>
+<div class="text">The S.D. takes the N. to the pedestal of the J.W. . The S.D. prompts the N. in his answers.</div>
+<div tabindex="0" class="SD"><span class="SDintro">S.D.</span>W.J.W., I present to you Bro. A.B. on his being passed to the Degree of F.C.<span class="page">142</span></div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>Bro. A. B., you will advance to me as a F.C.F.</div>
+<div class="text">(The N. takes the two s...ps).</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>Do you bring anything with you?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>I do <span class="text">(gives the s...n)</span>.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>What is that?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>The s...n of a F.C.F.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>Have you anything to communicate?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>I have <span class="text">(J.W. rises and receives the g...)</span>.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>What is this!</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>The g... or t... of a F.C.F.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>What does this g... demand?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>A w...</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>Give me that w...</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>In this Degree, as in the former, I was taught to be cautious, but with you, a Bro., I will l... or h... it.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>I commend you for your caution; l... it and begin.</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span><span class="text">(shares the w...)</span>.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>Pass ..., to the W.S.W.<span class="page">143</span></div>
+<div class="text">The S.D. takes the N. to the S. W.'s pedestal.
+The S.D. prompts the N. as before.</div>
+<div tabindex="0" class="SD"><span class="SDintro">S.D.</span>W.S.W., I present to you Bro. A.B., on his being passed to the Degree of F.C.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>Bro. A.B., you will advance to me as a F.C.F.</div>
+<div class="text">(The N. takes the two s...ps).</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>What is that?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>The second r... s...p in Freemasonry.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>Do you bring anything with you?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>I do <span class="text">(gives the s...n of f...)</span>.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>What is that?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>The s...n of f..., or of secrecy, emblematically to shield the repository of our s...ts from the attacks of the insidious.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>Do you bring anything else?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>I do <span class="text">(gives the h... s...n)</span>.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>What is that?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>The h... s...n or s...n of p...e.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>Do you bring anything else?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span> I do <span class="text">(gives the p... s...n)</span>.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>What is that?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span> The p... s...n of a F.C.F.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>To what is it supposed to allude?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>To the p..y attached among our ancient Operative Brn., to any violation of the O..., which was that of having, etc.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>Have you anything to communicate?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>I have <span class="text">(S.W. rises and receives the g...)</span>.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>What is this?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>The g... or t... of a F.C.F.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>What does this g... demand?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>A w...</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>Give me that w...</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>In this Degree, as in the former, I was taught to be cautious, but with a you, Bro., I will l... or h... it.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>I commend you for your caution; h... it and begin.</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span><span class="text">(shares the w...)</span>.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>Whence is this w... derived?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>From the r... h... p... at the p..y e...e of K. S...'s T..., so named after ..., the assistant H... P... who officiated at its dedication.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>The import of the w...?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>...</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>And when conjoined with that of the First Degree?</div>
+<div tabindex="0" class="C"><span class="Cintro">N.</span>...</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>Pass,</div>
+
+</div>
+<div class="chapter" id="chap9">
+<h2 id="9">The Investiture</h2>
+<div class="text">The S.D. places the N. on the S.W.'s left. The S.W. takes the N.'s hand, rises and says :</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>R.W.M., I present to you Bro. A.B., on his being passed to the Degree of F.C., for some further mark of your favour.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>W.S.W., I delegate to you the duty of investing out Bro. with the distinguishing Badge of a F.C.F.</div>
+<div class="text">The investiture takes place as in the preceding Degree, the flap of the badge pointing upwards.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span><span class="text">(to the N.)</span> Bro. A.B., by command of the R.W.M. I invest you with the distinguishing badge of a F.C. F., to mark the progress you have made in the Science.</div>
+<div class="text">The S.W. gently lowers the flap of the badge, salutes and returns to his pedestal.</div>
+All sing
+<p class="song">With your emblem now invested,<br>
+Still proceed as you began;<br>
+Prove yourself, however tested,<br>
+Both a Craftsman and a man.<br>
+Let your life be free from evil,<br>
+Never by temptation fall;<br>
+Tried by plumb-rule, square or level,<br>
+Let your actions fit them all.<br></p>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> <span class="text">(to the N., who faces E.)</span>Bro. A.B., the badge with which you have just been invested points out to you that, as a F.C.F., you are expected to make the hidden mysteries and meaning of our Science your future study, that you may be the better enabled to discharge your duties as a Freemason and estimate more truly the wonderful manifestations of T.G.G.O.T.U.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> Bro. S. D., you will place our Bro. in the S.E. part of the Lodge, at the corner of the mosaic pavement.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span><span class="text">(or a P.M.)</span>Bro. A.B., when you were made an E.A. you were placed in the N.E. part of the Lodge to show that you were newly admitted. Freemasonry being a progressive science, you are now placed in the S. E. to mark the progress you have made. You now stand, to all external appearance, a just and upright F.C.F., and I earnestly recommend you ever to continue and act as such. I am led to hope that the import of the Charge delivered to you in the First Degree neither has been, nor ever will be, effaced from your memory. I shall, therefore, content myself with observing that as you have had an opportunity of making yourself acquainted in the First Degree with the principles of Moral Truth and Virtue, you are now in this Degree <span class="page">148</span>required to extend your researches to the more hidden paths of Nature and Science.</div>
+
+</div>
+<div class="chapter" id="chap10">
+<h2 id="10">Working Tools</h2>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>W.S.W., you will explain the Working Tools of this Degree.</div>
+<div class="text">The S.D. places the N. in front of the S.W.'s pedestal.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>Bro. A.B., by command of the R.W.M. I present to you the working tools of a F.C.F. They are the S..., the L... and the P... R... The S... is used by Operative Masons to try, and to adjust, all rectangular corners of buildings and to assist in bringing rude matter into due form. The L... is to lay levels and prove horizontals. And the P... R... is to try, and to adjust all uprights while fixing them on their proper bases.<br>
+But as we are not Operative, but Free and Accepted, or Speculative Masons, we apply these tools as symbols and invest them with a moral significance.<span class="page">149</span>
+Thus the S... teaches us to regulate our actions by the Masonic line and rule and to correct and harmonise our conduct.
+The L... demonstrates that we are all sprung from the same stock, are partakers of the same nature and sharers of the same hope and that, although distinctions among men are highly necessary to preserve due subordination and to reward merit and ability, yet no eminence of station should cause us to forget that we are Brn.<br>
+The infallible P... R... teaches us to walk uprightly in our several stations; to hold the scales of justice with an equal poise, so that neither passion nor prejudice cause us to deviate from the strict path of virtue, and thus to observe a due medium, the golden mean in all things.<br>
+Hence, the S... teaches us the morality, the L... equality, and the P... R..., justness and uprightness of life and actions; so that by s... conduct, l... steps and upright intentions, we may hope to <span class="page">150</span>ascend to a higher realisation of that Immortal Principle whence all goodness emanates.</div>
+All sing.
+<p class="song">The integrity of the upright shall guide him: the righteousness of the perfect shall direct his way.<br>
+Righteousness tendeth to life: and to him that soweth it there shall be a sure reward.</p>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>You are now at liberty to retire in order to restore yourself to your p...l c...t, and on your return your attention will be called to a Charge.</div>
+<div class="text">The S.D. instructs the N. to salute in the usual manner on covering and re-entering the Temple.</div>
+</div>
+<div class="chapter" id="chap11">
+<h2 id="11">A Charge in the Second Degree</h2>
+<div class="text">Usually omitted.</div>
+
+<div tabindex="0" class="IPM"><span class="IPMintro">I.P.M.</span>Now that you have duly been passed to the Second Degree we congratulate you <span class="page">151</span>on your preferment. It is unnecessary to recapitulate the duties which as a Mason you are bound to discharge, or to enlarge on the necessity of a strict adherence to them, as your own experience must have established their value. In your new character it is expected that you will not only conform to the principles of the Order, but steadily persevere in the practice of every virtue. The study of the liberal arts, which tend so effectually to polish and adorn the mind, is earnestly recommended to your consideration, especially the science of geometry, which is established as the basis of our Art. You are to preserve our ancient usages and customs sacred and inviolable, and induce others by your example to hold them in veneration. The laws and regulations of the Order you are strenuously to support and maintain. You are not to palliate or aggravate the offences of your Brn.; but in the decision of every trespass against our rules, judge with candour, admonish <span class="page">152</span>with friendship and reprehend with mercy. As a C.n in our private assemblies you may offer your opinions on such subjects as are introduced in the lecture, under the superintendence of an experienced Master who will guard the Landmarks against encroachment. By this privilege you may improve your intellectual powers, qualify yourself to become a useful member of society, and, like a skilful Bro., strive to excel in what is good and great. You are duly to honour and obey all regular s...s and summonses, given and received. You are to encourage industry and reward merit, supply the wants and relieve the necessities of the Brn. to the utmost of your power and ability, and on no account to wrong them or see them wronged, but timely to apprise them of approaching danger, and to view their interests as inseparable from your own. Such is the nature of your engagements as a F.C.F., and these duties you are bound by the most sacred ties to observe.<span class="page">153</span></div>
+<div class="text">Before the Mystic Charge is given the following verse may be sung...</div>
+<p class="song">Brother, faithful and deserving,<br/>
+Now the second rank you fill;<br/>
+Never from your purpose swerving,<br/>
+Press straight onward higher still.<br/>
+Thus from rank to rank ascending<br/>
+Mounts the Mason's path of love;<br/>
+Bright its earthly course, and ending<br/>
+In the glorious Lodge above.</p>
+</div>
+<div class="chapter" id="chap12">
+<h2 id="12">Mystic Charge</h2>
+<div class="text">Given by the I.P.M. or other P.M.</div>
+<div tabindex="0" class="IPM"><span class="IPMintro">I.P.M.</span>NAs on your Initiation you were taught to regard the ceremony through which you had passed in a clearer and fuller light than that in which many Freemasons regard it, so now again must you realise that among us, the F.C. Degree carries with it a special teaching, and imposes upon your life certain responsibilities. This Degree represents those stages in the true Mysteries during which the<span class="page">154</span>Initiate is called to improve and polish his own nature, to develop his intellectual, artistic and psychic faculties, as during the stage of the E.A.F. he should specially cultivate his moral capacities. Moreover, he has a duty to the world in general as to his Brn. in Freemasonry in particular.
+For the development of your intellectual and artistic powers, you, as a F.C., should consecrate some part of the T...-f... I... G... to the study of philosophy, science or art, choosing your subject according to the bent of your mind, and the type of your temperament. For the unfolding of your psychic capacities you should daily retire for a brief space from the outer world, and securing yourself against interruption, you should meditate steadily on the Beautiful, the True or the Good, striving to see with your inner vision the ideal you picture by your imagination. Thus may you win some of the hidden secrets of Nature and may communicate them, as you see fitting, to your Lodge working in the Second Degree.<br>
+In the world you should be an example of serious and harmonious living, endeavouring to lead a nobly simple life, dignified and beautiful, a silent protest against the enfeebling luxury and the ugly ostentation of ordinary modern society. In your home, in your dress, in your gestures, in your speech, you should seek the congruous, the graceful, the delicate, the beautiful, remembering that true beauty is not dependent on wealth nor on social position, but on measured harmony, on congruity, on balance, on dignity, on the subordination of details to the whole, of the form to the idea. Study Nature and learn from her the harmonies of life, of colour and of form. Avoid all that is meretricious, showy and vulgar. Seek in art the ideal, and help the form to express the truth it veils, remembering that the ugly and distorted are Nature's failures, which she ever seeks to transmute.<br>
+See to it, 8S a F.C., that the world is the better for your smoothing and polishing of the crude stones, and that the Temple we are raising for humanity becomes the fairer for your inclusion among C...n.</div>
+<div class="text">All sing</div>
+<div tabindex="0" class="song">Stand forth, O worthy Craftsman,<br>In order's fair array;<br>Stand forth with strains of gladness<br>On this your happy day.<br>Praise we the Great Creator,<br>Our hearts and voices raise,<br>His gates with songs to enter,<br>And tread His courts with praise.<br><br>Stand forth, O worthy Craftsman,<br>Uphold the plumb-line fair;<br>We meet upon the level<br>And part upon the square;<br>And thus by upright living<br>We strive towards the Light;<br>May this our humble service<br>Be pleasing in His sight.<br><div class="tooltip">S... m... i... b...<span class="tooltiptext">So mot it be</span> </div><br>
+</div>
+
+</div>
+<div class="chapter" id="chap13">
+<h2 id="13">Explanation of the Tracing Board of the Second Degree</h2>
+<span class="page">138-139</span><img src="./images/TB2nd.jpg" alt="TB2nd" width="300" ><br>
+<div tabindex="0" class="IPM"><span class="IPMintro">I.P.M.</span>At the building of K... S...'s T..., symbolising the t... of humanity that we are raising, a vast number of artificers were employed, consisting of E.A.s and F.C..n. The E.A.s received their wages in corn, wine and oil, the fruit of the earth on which humanity dwells. They symbolise the natural direct rewards in kind of well-directed human labour. The F.C...n were paid in specie, symbolising the rewards of toil, not directly remunerated by its results, and went to receive their wages in the m... C... of K... S...'s T... They arrived there by way of a p... at the entrance of which stood two great p... That on the left was called ..., which denotes In..., that on the right was called ..., which denotes To ...; the two conjoined signify ...<br>Every Freemasons' Lodge has or ought to have, two pillars one on each side of the western entrance. These represent the p... at the e...e of the T... They were formed hollow, to receive the archives of Freemasonry. The superintendent of the casting of them was H..., the son of a widow of Naphtali. They were adorned with two capitals encircled with net-work, lily-work and rows of pomegranates. Net-work, from the connection of its meshes, denotes unity; lily-work from its whiteness, peace; pomegranates, from the exuberance of their seed, plenty. They were further adorned with two spherical balls on which were delineated maps of the celestial and terrestrial globes, which denote the universality of Freemasonry.<br>After passing these two great p... the F.C.n arrived at the foot of a winding staircase, where their ascent was opposed by the ancient J.W., who demanded of our Brn. the <div class="tooltip">p... w...<span class="tooltiptext">PassWord</span></div> of a F.C.. This is ... and is depicted in a F.C., Lodge by ..., ... The word is taken from a story of battle in the Hebrew Scriptures, and, as it was then a test word to distinguish friend from foe, K...S... caused it to be adopted as a <div class="tooltip">p... w...<span class="tooltiptext">PassWord</span></div> in a F.C. Lodge, to prevent any unqualified person from ascending the winding staircase that led to the m... C.. of K... S...'s T...<br>Our ancient Brn. then communicated the p... g... to the J.W., who, having received these convincing proofs, said: "Pass,..."<br>They then passed up the winding staircase, consisting of three flights of steps, the first numbering three, the second five and the third seven. Three rule a Lodge; five hold a Lodge; seven or more make it perfect. The three that rule a Lodge are the R.W.M. and his two W...s. The five that hold a Lodge are the R.W.M., the W..s, and two F.C...n. The seven that make it perfect are two E.A...s or other M...s added to the former number.<br>Three rule a Lodge because there were but, three G...M...s, who bore sway at the building of the first T... at Jerusalem-S..., <span class="page">160</span>K... of I.., H..., K... of T..., and H... A... Five hold a lodge, in allusion to the five noble orders of architecture-the Tuscan, Doric, Ionic, Corinthian, and Composite -and to the five senses, the avenues through which we acquire knowledge. Seven or more make a perfect Lodge, because K... S... was seven years and upwards in building, completing and dedicating the T... at Jerusalem to God's service; they have likewise a further allusion to the seven liberal arts and sciences - grammar, rhetoric, logic, arithmetic, geometry, music and astronomy.<br>When our ancient Brn. had gained the summit of the staircase, they arrived at the door of the m... c..., which they found properly tyled by the ancient S.W., who demanded of them the s...n, t... and w... of a F.C. After they had given convincing proofs that they were F.C...n, he said: "Pass, ...". They then passed into the m... c.., to receive their wages, which they did without scruple and without diffidence. <span class="page">161</span>Without scruple, knowing that they were entitled to receive them; and without diffidence, from the strict reliance they placed in the integrity of their employers in those days. When they were in the m... c... their attention was particularly arrested by certain Hebrew characters, which are now depicted in a F.C. Lodge by the letter G, which refers to T.G.G.O.T.U., who has planned the universe by numbers.</div>
+
+</div>
+<div class="chapter" id="chap14">
+<h2 id="14">Examination of Candidates for the Third Degree</h2>
+<div class="text">F.C. F...s before being raised to the Third Degree are examined with regard to their proficiency in the Second Degree, just as they were previously examined with regard, to the First Degree.</div>
+<div class="text">The Lodge being open in the Second Degree, the R.W.M. proceeds as follows:<span class="page">162</span></div>
+
+</div>
+<div class="chapter" id="chap15">
+<h2 id="15">Questions</h2>
+<div class="text">These must be satisfactorily answered from memory.</div>
+
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Brn., Bro. A.B. is a Candidate to be raised to the Sublime Degree of M.M., but it is first necessary that he should give proofs of his proficiency in the Second Degree. I shall therefore proceed to ask him the usual questions.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Bro. S.D., you will advance the F.C. to my pedestal.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>How were you prepared to be passed to the Second Degree?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>In a manner somewhat similar to that in the former, save that in this Degree I was not d... of m..s or v...s nor h... w... I had my l... a..., r... b... and r... k... made b... and my l... h... s...p-s...d.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>On what were you admitted?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>On the s...</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>What is a s...?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>An a... of n...y d...s or the f...h p...t of a c...e.<span class="page">163</span></div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>What are the peculiar objects of research in this Degree?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>The hidden mysteries of Nature and Science.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>As it is the hope of reward that sweetens labour, where did our ancient Brn. go to receive their wages?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>To the m... c... of K... S...'s T... .</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>How did they receive them?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>Without scruple and without diffidence.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Why in this peculiar manner?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>Without scruple, knowing they were entitled to receive them; and without diffidence, from the strict reliance they placed in the integrity of their employers.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>What were the names of the two great p... which were placed at the p...y e...e of K... S...'s T...?</div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>That on the ... was called ..., and that, on the ... ...</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>What are their separate and conjoint significations?<span class="page">164</span></div>
+<div tabindex="0" class="C"><span class="Cintro">C.</span>The former denotes ...; the latter ...; and when conjoined ... .</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> Brn., these are the usual questions. If any Bro. desires me to put others, let him speak.</div>
+<div class="text">Should any Bro. desire to question the C. further, he asks the R.W.M. whether it is in order to ask ... etc. <br/>
+The R.W.M., if he considers the question suitable, addresses it to the C.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span> <span class="text">(if no Bro. puts a question)</span>The c...s are s..., R.W.M.</div>
+<div class="text">The R.W.M. then causes all F.C.s to cover the Temple. The C. can be raised at this or a subsequent meeting.<span class="page">165</span></div>
+</div>
+<div class="chapter" id="chap16">
+<h2 id="16">Ceremony of Closing the Lodge in the Second Degree</h2>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> <span class="text">(gives one k.., which is answered by the W...s, and says)</span>Brn., assist me to close this F.C. Lodge.
+<span class="text">(All rise.)</span></div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>W.J.W., what is the constant care of every F.C.F.?</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>To prove the Lodge close tyled, R.W.M.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Direct that duty to be done.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>Bro. I.G., you will prove that the Lodge is close tyled.</div>
+<div class="text">The I.G. gives F.C. k...s, which are answered by the O.G.</div>
+<div tabindex="0" class="IG"><span class="IGintro">I.G.</span>W.J.W., the Lodge is close tyled.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>R.W.M., the Lodge is close tyled.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>W.S.W., what is our next care?</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>To see that the Brn. stand to order as F.C. F...s, R.W.M.<span class="page">166</span></div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> Brn., to order as F.C. F...s.</div>
+<div class="text">The Brn. taking two r... s...ps stand to order with s...n, and do not in this case drop to p... of f...</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>W.J.W., in this position what have you discovered?</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>A s...d S...l, R.W.M.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>W.S.W., where is it situated?</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>In then c... of the building, R.W.M.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>W.J.W., to whom does it allude?</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>To T.G.G.O.T.U., R.W.M. <span class="text">(All drop to p... of f...)</span>.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Then, Brn., let us remember that, as He is the c... of His Universe, so is His reproduction of Himself the c... of ourselves, the Inner Ruler immortal, and that our whole nature must be conformed to That whereby it lives.</div>
+All sing<br><div tabindex="0" class="song"><div class="tooltip">S... m... i... b...<span class="tooltiptext">So mot it be</span> </div><br>
+Now our labours closing<br>
+And from toil reposing,<br>
+Now may God direct us<br>
+And from harm protect us.<br>
+<div class="tooltip">S... m... i... b...<span class="tooltiptext">So mot it be</span> </div>
+</div>
+<div class="text">The I.P.M. is conducted by the D.C. as in the previous Degree.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>W.S.W., the labours of this Degree being ended, you have my command to close this F.C. Lodge <span class="text">(gives F.C. k...s)</span>.</div>
+<div tabindex="0" class="SW"><span class="SWintro">S.W.</span>Brn., <span class="text">(all come to order, and the S.W. raises his hands)</span> in the Name of T.G.G.O.T.U., <span class="text">(joining his hands in front of his forehead palm to palm and bowing)</span> and by command of the R.W.M. <span class="text">(standing upright with g... in hand)</span> I close <span class="text">(all finish the s...n, dropping the hand to the side and disengaging the f..t from the position of order)</span> this F.C. Lodge <span class="text">(gives F.C. k...s)</span>.</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>And it is closed accordingly <span class="text">(gives F.C. k...s, which are answered by the I.G. and O.G.)</span>.<span class="page">168</span></div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>And I declare the Lodge resumed in the Degree of E.A. <span class="text">(gives E.A. k...s, which are answered by the S.W., J.W., I.G. and O.G.)</span>. And this shall be your s..n.<span class="text">(R.W.M. gives E.A.s.n, followed by Brn.)</span></div>
+
+<div class="text">As the S.W. utters the word "close" the I.P.M disarranges the s... and c...s, and at the word "resumed" he adjusts them to the E.A. Degree; when the s...n has been given he returns to the E., and the S.D. arranges the T... B...</div>
+<div class="text">The Brn. resume their seats, and E.A.F...s are re-admitted.</div>
+
+</div>
+<div class="chapter" id="chap17">
+<h2 id="17">Short Method of Closing the Lodge in the Second Degree</h2>
+<div class="text">(This method should not be used after a Ceremony of Passing).</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span> <span class="text">(gives one k..., which is answered by the W...s, rises, and says)</span>: Principal Officers upstanding <span class="text">(W...S rise)</span>: W.J.W., will you be Off or From?</div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span>Off, R.W.M.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Off what?<span class="page">169</span></div>
+<div tabindex="0" class="JW"><span class="JWintro">J.W.</span> Off the Degree of F.C. to that of E.A.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Rise, Brn. <span class="text">(all rise)</span>.</div>
+<div class="text">The I.P.M. is conducted by the D.C., as in the previous Degree.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>Brn. <span class="text">(all come to order)</span> by virtue of the power in me vested as Master, I close <span class="text">(all finish the s...n, dropping the hand to the side and disengaging the f...t from the position of order)</span> this F.C Lodge <span class="text">(gives F.C. k...s, which are answered by the S.W., J.W., I.G. and O.G.)</span>.</div>
+<div tabindex="0" class="RWM"><span class="RWMintro">R.W.M.</span>And I declare the Lodge resumed in the Degree of E.A. <span class="text">(gives E.A. k...s, which are answered as before)</span>. And this shall be your s...n <span class="text">(R.W.M. gives the E.A. s...n, followed by Brn.)</span>.</div>
+<div class="text">At the word "close" the I.P.M. disarranges the s... and c...s and at the word "resumed" he adjusts them to the E.A. Degree; when the s...n has been given he returns to the E., and S.D. arranges the T...B...</div>
+<div class="text">The Brn. resume their seats, and E.A. F...s are re-admitted.</div>
+</div>
+</body>
+</html>
+
