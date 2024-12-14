@@ -161,7 +161,7 @@ td{
 }
 
 div:focus{
-  border:solid violet; 20px;
+  border:solid red 5px;
 }
 
 .RWM{
