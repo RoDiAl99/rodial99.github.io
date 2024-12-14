@@ -1,7 +1,7 @@
 // Get the root element
 var r = document.querySelector(':root');
 var rs = getComputedStyle(r);
-var curChap = 1;
+var curChap;
 var curElt;
 var listCheck;
 var offChecked;
@@ -10,18 +10,19 @@ var maxChap;
 
 function init() {
 	// body onload
- // Select all officers
+    // Select all officers
 	listCheck = document.querySelectorAll('input[type="checkbox"]');
 	offChecked = ""
+	curChap = 1
+   	maxChap = document.querySelectorAll('div.chapter').length;
+    curElt = 0
 	listCheck.forEach(function (inp) {
 		inp.checked = true;
       	offChecked += (offChecked == "" ? "" : ",")+"div."+inp.parentElement.parentElement.id
 	})
 	offList = document.getElementById("chap"+curChap).querySelectorAll(offChecked)
 	// Selection du premier texte d'un officier selectionne
-    curElt = 0
     offList[curElt].focus()
-   	maxChap = document.querySelectorAll('div.chapter').length;
 }
 
 function toc() {
@@ -32,7 +33,8 @@ function toc() {
 function hidToc(e) {
 	document.getElementById("DocToc").style.left = "-999px";
 	if(e){
-		curChap = e.target.href.substr(e.target.href.search("#")+1)
+		curChap = e.target.href.substr(e.target.href.search("#")+1) * 1.0
+		alert(curChap+1)
 		offList = document.getElementById("chap"+curChap).querySelectorAll(offChecked)
 		// Selection du premier texte d'un officier selectionne
     	curElt = -1
@@ -62,7 +64,7 @@ function hidOff() {
 
 function listOff() {
 	// Mise a jour des Officiers mis en couleur
-	listCheck = document.querySelectorAll('input[type="checkbox"]');
+	// listCheck = document.querySelectorAll('input[type="checkbox"]');
 	offChecked = ""
 	listCheck.forEach(function (inp) {
       	if (inp.checked){
@@ -86,16 +88,17 @@ function listOff() {
 
 function selAll(){
  // Select all officers
-	listCheck = document.querySelectorAll('input[type="checkbox"]');
+	// listCheck = document.querySelectorAll('input[type="checkbox"]');
 	listCheck.forEach(function (inp) {
 		inp.checked = true;
 	  	r.style.setProperty("--"+inp.parentElement.parentElement.id+"col",rs.getPropertyValue("--"+inp.parentElement.parentElement.id+"color"));
 	})
+	listOff();
 }
 
 function unselAll(){
  // Unselect all officers
-	listCheck = document.querySelectorAll('input[type="checkbox"]');
+	// listCheck = document.querySelectorAll('input[type="checkbox"]');
 	listCheck.forEach(function (inp) {
 		inp.checked = false;
 		{r.style.setProperty("--"+inp.parentElement.parentElement.id+"col","rgb(240,240,240)");}
@@ -110,7 +113,7 @@ function prev() {
 	}else{
     	curElt = Math.max(0,curElt - 1)
 	}
-	offList[curElt].focus()
+    if (offList.length>0) {offList[curElt].focus()}
 }
 
 function next() {
@@ -121,6 +124,6 @@ function next() {
 	}else{
     	curElt = Math.min(offList.length-1,curElt + 1)
 	}
-    offList[curElt].focus()
+    if (offList.length>0) {offList[curElt].focus()}
 }
 
